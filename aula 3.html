@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+article {
+
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: xx-large;
+color: darkred;
+}
+
+
+
+
+</style>
+
+
+
+
+</head>
+<body>
+  
+  <article>
+    Esse é um artigo de teste.Esse é um artigo de teste.
+    Esse é um artigo de teste.Esse é um artigo de teste.Esse é um artigo de teste.
+    Esse é um artigo de teste.Esse é um artigo de teste.Esse é um artigo de teste.
+    Esse é um artigo de teste.Esse é um artigo de teste.Esse é um artigo de teste.Esse é um artigo de teste.
+    Esse é um artigo de teste.Esse é um artigo de teste.Esse é um artigo de teste.
+
+  </article> 
+  
+  <menu type="toolbar">
+    <command type="radio" radioground="alinhamento" checked="checked" <label for="esquerda" onclick="setalight('esquerda')"></label> esquerda</command>
+    <command type="radio" radioground="alinhamento"  <label for="centro" onclick="setalight('centro')"></label>centro</command>
+        <command type="radio" radioground="alinhamento"  <label for="direita" onclick="setalight('direita')"></label>direita</command>
+
+
+        <button type="button" onclick="anovo()">Novo</button>
+        <button type="button" onclick="aabrir()">Abrir</button>
+        <button type="button" onclick="asalvar()">Salvar</button>
+        <button type="button" onclick="asalvarcomo()">Salvar como</button>
+</menu>
+
+
+<script type="text/javascript">
+    function anovo(){
+        window.alert("Novo arquivo criado.")
+
+    }
+
+    function aabrir(){
+        window.alert("Arquivo aberto.")
+
+    }
+
+    function asalvar(){
+        window.alert("Salvo com sucesso.")
+
+    }
+
+    function asalvarcomo(){
+        window.alert("Como deseja salvar este arquivo?")
+
+    }
+
+</script>
+
+<label for="cursosiag">Cursos:</label><br />
+<input type="text" list="cursos" id="cursosiag"/>
+<datalist id="cursos">
+    <option value="HTML5">
+        <option value="Dreamweaver">
+            <option value="Flash">
+                <option value="javascript">
+                    <option value="Fireworks">
+    
+</datalist>
+
+<details>
+    <summary>Cursos IAG</summary>
+    <ol>
+        <dt>Fotoshop CSS</dt>
+        <dd>Ano: 2012</dd>
+        <dd>Aulas: 180</dd>
+    </ol>    
+</details>
+
+  <aside>
+
+<nav>
+    <h1>Artigos relacionados de teste</h1>
+</nav>
+
+
+  </aside>
+
+</body>
+</html>
