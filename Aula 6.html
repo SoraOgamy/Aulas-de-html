@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>Curse After Effects Cs5: R$ 109,00</h3>
+<form name="Formulary_Sell" method="get" action="">
+    <label for="Quantidade"><input type="text" name="qto"/></label>
+<p>Valor total: <output name="Total"></output></p>
+</form>
+
+<script type="text/javascript">
+    function CalculaValorTotal(){
+            var qtdItems = document.forms['Formulary_Sell']['qto']. valor ;
+            var valortotal = (qtdItems).toFixed(2);
+            document.forms['Formulary_Sell'] ['Total'].value = valortotal ;
+ 
+    }
+    window.onload = function(){
+        document.forms['Formulary_Sell'] ['qto'].onblur = CalculaValorTotal ;
+
+
+    }
+
+</script>
+
+</body>
+</html>
