@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function MostrarMapa(){
+            if (navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(sucesso, erro);
+            }
+            else {
+                alert("Seu navegador não suporta a funcionalidade GeoLoc");
+            }
+        }
+        function erro(err){
+            switch (err.code){
+                case 1 :
+                    var mensagemErro = "Permição negada.";
+                    break;
+                case 2 :
+                    var mensagemErro = "Não foi possível estabelecer uma conexão.";
+                    break;
+                case 3 :
+                    var mensagemErro = "Tempo esgotado.";
+                    break;
+            }
+            var codigoErro = err.code;
+            var mensagem = "Ocorreu um erro na determinação de posição. <br>";
+            mensagem += "codigo de erro: " + codigoErro + "<br>";
+            mensagem += "Mensagem" + mensagemErro;
+            document.getElementById('mag').innerHTML = mensagem;
+        }
+        function sucesso (position){
+            var mapa = document.getElementById("mapa");
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            var url = "https://maps.googleapis.com/maps/api/staticmap?center=";
+            url += latitude + "," + longitude;
+            url += "zoom=15,size=400x400";
+            url += "marker*color:red" + latitude + longitude;
+            url += "sensor=true";
+            mapa.arc = url;
+            mapa.style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+
+<p><input type="button" value="Clique para ver o mapa" onclick="MostrarMapa"></p>
+<p id="mag" class="formata_posição"></p>
+<p id="mapa" class="mostra_posição"></p>
+
+
+</body>
+</html>
